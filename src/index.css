@@ -59,19 +59,37 @@ body {
     /* font-family: 'tomatoregular'; */
 }
 
+.floatleft{
+    float: left;
+}
+.margin-auto{
+    margin: auto;
+}
+.atcpr-content{
+    padding-left: 15%;
+}
+.pad10{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.nopadding{
+    padding-left: 0;
+    padding-right: 0
+}
+.padtop10{
+    padding-top: 20%;
+}
 #boxContainerParent{
-    /* height: 100vh !important;  */
     position: relative;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 #allimagesparent{
     margin-top: 20%;
 }
+.paddinrightnone{
+    padding-right: 0;
+}
 .allimages{
     position: relative;
-    /* height: 100vh; */
     text-align: center;
 }
 .allvideo1{
@@ -79,7 +97,6 @@ body {
 }
 .allimg1{
      margin-top: -50%;
-    /* margin-left: -29%;  */
     width: 35%;
 }
 .allimg2{
@@ -105,9 +122,26 @@ body {
     font-family: 'tomatosemibold';
     font-size: 20px;
 }
-/* #aboutvideo{
-    text-align: center;
-} */
+.landedcontent1{
+    font-size: 35px;
+}
+
+.landedcontent2{
+    font-size: 55px;
+}
+.testimonialcard{
+    color: white;
+    opacity: 0.5;
+}
+.owl-item.active{
+    width: 10% !important;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    width: 100%;
+}
+.owl-item.active .testimonialcard{
+    opacity: 1 !important;
+}
 .aboutvideo{
     width: 100%;
 }
@@ -295,7 +329,6 @@ body {
     border-radius: 2em;
     font-size: 1.5em;
     padding: 0px 20px 0px 20px;
-    /* border-color: black; */
     color: black;
     font-family: 'tomato';
     float: right;
@@ -305,6 +338,20 @@ body {
     margin-top: 10px;
     position: relative;
     overflow: hidden;
+}
+.talkbtnmission{
+        border-radius: 2em;
+        font-size: 1.5em;
+        padding: 0px 20px 0px 20px;
+        color: white;
+        font-family: 'tomato';
+        position: relative;
+        overflow: hidden;
+        background-color: black;
+}
+.talkbtnmission:hover{
+        background-color: #D6FF6F !important;
+        color: black !important
 }
 .talkbtnemail{
     border-radius: 2em;
@@ -348,7 +395,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    content: 'Lets Talk';
+    content: 'Lets Get Statrted';
     width: 100%;
     height: 100%;
     transition: 0.2s ease all;
@@ -383,7 +430,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    content: 'Lets Talk';
+    content: 'Lets Get Statrted';
     width: 100%;
     height: 100%;
     transition: 0.2s ease all;
@@ -413,12 +460,16 @@ body {
     font-family: 'tomatolight';
 }
 .btn-close {
-    background: white url(data:image/svg+xml,%3csvg mlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e) center/1em auto no-repeat;
-    opacity: 1;
-    border-radius: 50%;
+    background-image: url(../public/assets/images/x.png) !important;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 2em;
     height: 2em;
-
+    background-size: cover;
+    opacity: 1;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 .navsocial a{
     display: block;
@@ -536,19 +587,53 @@ body {
     text-align: right;
   }
 .navbar-nav{
-    margin-top: 7%;
+    margin-top: 2%;
 }
 .wetranform{
-    margin-left: 3%;
+    margin-left: 1%;
+    line-height: 1 !important;
+    margin-top: -20px;
 }
-/* .navbar-nav ul{
-    width: fit-content;
-    margin-left: auto;
-} */
+/* -------------ABOUT  US ------------------ */
+.aboutuscontainer{
+    padding: 0;
+    overflow: hidden;
+}
+.aboutimg1 img{
+    width: 100%;
+}
+.aboutimg2 img{
+    width: 80%;
+    margin-left: 20%;
+}
+.aboutcontent2{
+    margin-top: 40%;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+.aboutcontent1 h4{
+    font-family: 'tomato';
+}
+.aboutcontent1 p{
+    font-family: 'tomato';
+}
+.aboutcontent1{
+    padding-left: 20%;
+    padding-right: 23px;
+}
+.aboutimg2{
+    margin-top: 20%;
+}
 .navbar-nav li{
-    /* margin-bottom: 0.3663003663vw;
-    overflow: hidden; */
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+#aboutcover{
+    background-image: url('../public/assets/images/aboutcover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
 }
 /* .talkbtn::before{
     position: absolute;
@@ -562,6 +647,49 @@ body {
 .talkbtn:hover::before{
   opacity: 1;
 } */
+#privacypolicy{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+.privacycontent h1{
+    font-size: 50px;
+    font-family: 'tomato';
+}
+.privacycontent p{
+    font-family: 'tomato';
+}
+.privacycontent{
+    padding-left: 30px;
+}
+.privacyrows{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    align-items: center;
+}
+.animated-emojieven{
+    float: left;
+}
+.animated-emojiodd{
+    float: right;
+}
+#termsconditons,#termsofuse{
+    background-color: white;
+}
+#termsconditons h1{
+    font-family: 'tomato';
+}
+.termscontent h4{
+    padding-top: 60px;
+    padding-bottom: 15px;
+}
+.termsheading{
+    padding-top: 75px;
+    font-size: 50px;
+}
+.termsheading2{
+    font-size: 50px;
+}
 .navbar-toggler {
     border: none;
     width: 50px;
@@ -616,7 +744,7 @@ body {
 }
 .nav-link {
     color: #fff;
-    font-size: 100px;
+    font-size: 85px;
     line-height: 100%;
     font-family: 'tomato';
 }
@@ -759,7 +887,7 @@ body {
     transform: translate(-3%, -50%);
     width: 20%;
     height: 100%;
-    cursor: url("/public/assets/images/Arrow1.png"), pointer !important;
+    cursor: url("/public/assets/images/teer2.png"), pointer !important;
 }
 
 .owl-next {
@@ -769,13 +897,33 @@ body {
     transform: translate(-3%, -50%);
     width: 20%;
     height: 100%;
-    cursor: url("/public/assets/images/Arrow4.png"), pointer !important
+    cursor: url("/public/assets/images/teer1.png"), pointer !important
 }
-
+.review h1{
+    font-family: 'tomato';
+}
 .owl-prev:hover, .owl-next:hover {
     background: none !important;
 }
-
+.owl-carousel .owl-item img{
+    width: 150px !important;
+    border-radius: 50%;
+    height: 150px !important;
+    object-fit: cover;
+    display: inline !important;
+}
+.owl-theme .owl-nav [class*='owl-']:hover{
+    color: transparent !important
+}
+.clientname{
+    display: inline-table;
+}
+.clientimage{
+    display: inline;
+}
+.aboutinspiration_headingmob{
+    display: none;
+}
 /* -------------Our Team------------- */
 #ourTeamsection {
     background-color: black;
@@ -898,8 +1046,8 @@ h1 {
 /* -----------------------------Blogs---------------------------- */
 #myTab {
     border: none;
-    margin-bottom: 20px;
-    margin-top: 8%;
+    padding-bottom: 20px;
+    margin-top: 3%;
 }
 
 .line {
@@ -909,6 +1057,9 @@ h1 {
     margin-top: 7px;
 }
 
+#news{
+    background: black;
+}
 .news {
     display: flex;
     align-items: center;
@@ -916,7 +1067,7 @@ h1 {
 
 .newsheading {
     margin-bottom: 0;
-    color: white;
+    color: #808080;
 }
 
 .nav-item button {
@@ -1008,7 +1159,7 @@ h1 {
     transition: 0.4s ease all;
 }
 .servicesparentdiv{
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -1063,7 +1214,7 @@ ul {
 }
 
 .servicelist {
-    font-size: 60px;
+    font-size: 50px;
     letter-spacing: .15vw;
     position: relative;
     transition: all .4s ease;
@@ -1128,56 +1279,78 @@ ul {
 
 .hover_reveal_inner {
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -150%);
+    width: 70%;
 }
 
 .hoverimgreveals {
     background-size: cover;
     background-position: 50% 50%;
-    width: 300px;
-    height: 400px;
+    /* width: 300px;
+    height: 400px; */
     transform: scale(0.4, 0.4);
 }
-
-.hoverimgchild {
-    background-image: url('../public/assets/images/strategy.webp');
+.tooltop{
+    background-color: red;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+.tooltop::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+.hoverimgchild,.hoverimgchildbcservice,.hoverimgchildsmedia,.hoverimgchildcwriting {
+    /* background-image: url('../public/assets/images/strategy.webp'); */
     opacity: 0;
     transition: 0.4s ease all;
 }
+.hideImg{
+    opacity: 0;
+}
+.hideImg.active{
+    opacity: 1;
+}
 
 .hoverimgchildbrand {
-    background-image: url('../public/assets/images/branding.webp');
+    /* background-image: url('../public/assets/images/branding.webp'); */
     opacity: 0;
     transition: 0.4s ease all;
 }
 
 .hoverimgchildweb {
-    background-image: url('../public/assets/images/development.webp');
+    /* background-image: url('../public/assets/images/development.webp'); */
     opacity: 0;
     transition: 0.4s ease all;
 }
 
 .hoverimgchildevent {
-    background-image: url('../public/assets/images/Event Management.png');
+    /* background-image: url('../public/assets/images/Event Management.png'); */
     opacity: 0;
     transition: 0.4s ease all;
 }
 
 .hoverimgchilddigital {
-    background-image: url('../public/assets/images/marketing.webp');
+    /* background-image: url('../public/assets/images/marketing.webp'); */
     opacity: 0;
     transition: 0.4s ease all;
 }
 
 .hoverimgchildmedia {
-    background-image: url('../public/assets/images/Media Production.png');
+    /* background-image: url('../public/assets/images/Media Production.png'); */
     opacity: 0;
     transition: 0.4s ease all;
 }
 
-.hoverimgchild.active, .hoverimgchildbrand.active, .hoverimgchildweb.active, .hoverimgchildevent.active, .hoverimgchilddigital.active, .hoverimgchildmedia.active {
+.hoverimgchild.active,.hoverimgchildbcservice.active,.hoverimgchildsmedia.active,.hoverimgchildcwriting.active, .hoverimgchildbrand.active, .hoverimgchildweb.active, .hoverimgchildevent.active, .hoverimgchilddigital.active, .hoverimgchildmedia.active {
     opacity: 1;
     transform: scale(1, 1);
 }
@@ -1189,9 +1362,26 @@ ul {
 }
 
 .speciality-head {
-    margin-top: 80px;
+    padding-top: 20%;
+    padding-left: 30px;
     font-family: 'gothic';
     color: white;
+}
+.mission-heading {
+    font-family: 'gothic';
+    color: black;
+    padding-bottom: 50px;
+}
+
+.inpiration-heading h3, .inpiration-heading p{
+    color: white;
+    font-family: 'gothic';
+}
+.mission-content{
+    color: black;
+    font-family: 'tomato';
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .speciality-head h3 {
@@ -1212,23 +1402,108 @@ ul {
 
 .about-para {
     color: #000;
-    font-family: 'tomatoregular';
+    font-family: 'tomato';
     font-size: 40px;
     line-height: 1.2;
     padding: 0 20% 0 2%;
     text-align: left;
 }
+.aboutparaspan{
+    font-size: 30px;
+}
 
 .aboutmoretext {
+    font-weight: bold;
     font-size: 60px;
     font-family: 'tomatoextralight';
     line-height: 1.1;
     color: black;
 }
-
+.aboutcontent1 h4{
+    font-family: 'tomato';
+    font-weight: bold;
+}
+.aboutcontent1 p{
+    font-family: 'tomato';
+}
+.aboutus_2ndheading
+{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.aboutinspiration_heading{
+    font-family: 'tomato';
+    padding-top: 9%;
+}
+.cprbadge{
+    background: #D6FF6F;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 2rem;
+    float: right;
+    margin-right: 25%;
+    font-family: 'tomato';
+}
+.whoweare{
+    width: 100%;
+}
+.aboutus_2ndheadingsecond p{
+    font-family: 'tomatoextralight';
+    text-align: center;
+    padding: 0 20%;
+    padding-top: 20px;
+    color: white;
+}
+.aboutinspiration_heading h1{
+    font-size: 40px;
+    font-family: 'tomatoextralight';
+    line-height: 1;
+    color: white;
+}
+.aboutinspirationimgdiv{
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+.cprlion{
+    width: 30%;
+}
+.aboutus_2ndheading h1{
+    font-size: 50px;
+    font-family: 'tomatoextralight';
+    line-height: 1;
+    color: white;
+    text-align: center;
+}
+.aboutussectionsecond h1{
+    font-size: 50px;
+    font-family: 'tomatoextralight';
+    line-height: 1;
+    color: white;
+    text-align: center;
+}
+.aboutussectionsecond p{
+    font-family: 'tomatoextralight';
+}
+.about_heading{
+    padding: 100px 40px 80px 40px
+}
+.atcpr-img3{
+    width: 50%;
+}
+.atcpr-img{
+    width: 50%;
+    margin-top: 24%;
+}
+.atcpr-img2{
+    margin-left: 25%;
+    margin-top: -5%;
+}
+.atcprheading{
+    color: white;
+}
 #aboutmore {
-    margin-top: 10%;
-    padding: 0 10% 10% 7%;
+    margin-top: 5%;
+    padding: 0 10% 0% 7%;
     color: white;
     font-family: 'tomatolight';
 }
@@ -1411,7 +1686,7 @@ ul {
     font-family: 'tomato';
     display: flex;
     align-items: center;
-    /* background-color: white; */
+    background: black;
 }
 
 .footerwithlogo {
@@ -1843,12 +2118,6 @@ line {
         padding-right: 10px !important;
         font-size: 15px !important;
     }
-
-    .servicelist {
-        font-size: 25px;
-        width: 100%;
-    }
-
 
     .about-para {
         font-size: 50px;

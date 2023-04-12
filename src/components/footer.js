@@ -1,53 +1,59 @@
-import React from 'react'
-import { HiArrowNarrowRight } from 'react-icons/hi';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import React from "react";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { HashLink as Link } from "react-router-hash-link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
-    // useEffect(() => {
-    //     ScrollTrigger.matchMedia({
+    const hidenav = () => {
+        document.body.style.overflow = "visible";
+        const check = document.querySelector(".offcanvas");
+        check.style.opacity = 0;
+        check.style.zIndex = -1;
+      };
+//   useEffect(() => {
+  //     ScrollTrigger.matchMedia({
 
-    //         // desktop
-    //         "(min-width: 800px)": function () {
-    //             ScrollTrigger.create({
-    //                 trigger: '#footer',
-    //                 start: 'top center',
-    //                 endTrigger: '#footer',
-    //                 markers: false,
-    //                 // scrub: 1,
-    //                 onEnter: () => {
-    //                     gsap.to('body', { duration: 1.0, backgroundColor: '#ffffff' })
-    //                 },
-    //                 onLeaveBack: () => {
-    //                     gsap.to('body', { duration: 1.0, backgroundColor: '#000000' })
-    //                 },
-    //             })
-    //         },
-    //         "(min-width: 1920px)": function () {
-    //             ScrollTrigger.create({
-    //                 trigger: '#footer',
-    //                 start: 'top center',
-    //                 endTrigger: '#footer',
-    //                 markers: false,
-    //                 // scrub: 1,
-    //                 onEnter: () => {
-    //                     gsap.to('body', { duration: 1.0, backgroundColor: '#000000' })
-    //                 },
-    //                 onLeaveBack: () => {
-    //                     gsap.to('body', { duration: 1.0, backgroundColor: '#000000' })
-    //                 },
-    //             })
-    //         }
-    //     })
-    // }, [])
-    return (
-        <>
-            <section id="footer" className='pad30'>
-
-                {/* <div className="blob">
+  //         // desktop
+  //         "(min-width: 800px)": function () {
+  //             ScrollTrigger.create({
+  //                 trigger: '#footer',
+  //                 start: 'top center',
+  //                 endTrigger: '#footer',
+  //                 markers: false,
+  //                 // scrub: 1,
+  //                 onEnter: () => {
+  //                     gsap.to('body', { duration: 1.0, backgroundColor: '#ffffff' })
+  //                 },
+  //                 onLeaveBack: () => {
+  //                     gsap.to('body', { duration: 1.0, backgroundColor: '#000000' })
+  //                 },
+  //             })
+  //         },
+  //         "(min-width: 1920px)": function () {
+  //             ScrollTrigger.create({
+  //                 trigger: '#footer',
+  //                 start: 'top center',
+  //                 endTrigger: '#footer',
+  //                 markers: false,
+  //                 // scrub: 1,
+  //                 onEnter: () => {
+  //                     gsap.to('body', { duration: 1.0, backgroundColor: '#000000' })
+  //                 },
+  //                 onLeaveBack: () => {
+  //                     gsap.to('body', { duration: 1.0, backgroundColor: '#000000' })
+  //                 },
+  //             })
+  //         }
+  //     })
+//   }, [])
+  return (
+    <>
+      <section id="footer" className="pad30">
+        {/* <div className="blob">
                     <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                         <g transform="translate(144, 6)">
                             <path className="blob" fill="#191818">
@@ -86,82 +92,138 @@ const Footer = () => {
                         </g>
                     </svg>
                 </div> */}
-                {/* <video autoPlay loop muted playsInline className="back-video">
+        {/* <video autoPlay loop muted playsInline className="back-video">
                     <source src={'./assets/videos/Blob.mp4'} type="video/mp4" />
                 </video> */}
-                <div className='container-fluid footercontent'>
-                    {/* <h1 className='talk'>Let's Talk.</h1> */}
-                    <div className="row">
-                        <div className='col-md-2'>
-                            <div className='gridview gridview1'>
-                                <h4>About</h4>
-                                <div className='footerlinks mar20'>
-                                    <a href="" className="nav-link">Our Mission</a>
-                                    <a href="" className="nav-link">Company</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-2'>
-                            <div className='gridview gridview1'>
-                                <h4>Expertise</h4>
-                                <div className='footerlinks mar20'>
-                                    <a href="" className="nav-link">Branding</a>
-                                    <a href="" className="nav-link">Digital Marketing</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-2'>
-                            <div className='gridview gridview1'>
-                                <h4>Legal</h4>
-                                <div className='footerlinks mar20'>
-                                    <a href="" className="nav-link">Terms of Use</a>
-                                    <a href="" className="nav-link">Privacy Policy</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-2'>
-                            <div className='gridview gridview1'>
-                                <h4>Connect</h4>
-                                <div className='footerlinks mar20'>
-                                    <a href="https://www.facebook.com/constantineprandcommunications/" className="nav-link">Facebook</a>
-                                    <a href="https://instagram.com/constantinepr?igshid=YmMyMTA2M2Y=" className="nav-link">Instagram</a>
-                                    <a href="https://www.linkedin.com/company/constantine-pr-communications/" className="nav-link">Linkedin</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-md-2'>
-                            <div className='gridview gridview1'>
-                                <h4>Newsletter</h4>
-                                <div className='footerlinks mar20'>
-                                    <Form>
-                                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Control type="email" placeholder="Enter email" />
-                                            <Button type="submit" className='sbmitbtn'>
-                                                <HiArrowNarrowRight />
-                                            </Button>
-                                        </Form.Group>
-                                    </Form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='row bottomfixed'>
-                        <div className="col-md-4 vertical-center">
-                        <img src={'./assets/images/Logofooter.png'} alt='footer-logo' className='footer-logomob' />
-                            <div className='copywright'>
-                                © ConstantinePR . 2023
-                            </div>
-                        </div>
-                        <div className='col-md-4 text-center'>
-                            <img src={'./assets/images/cpr_ico_white.png'} alt='footer-logo' className='footer-logo' />
-                        </div>
-
-                    </div>
+        <div className="container-fluid footercontent">
+          {/* <h1 className='talk'>Let's Talk.</h1> */}
+          <div className="row">
+          <div className="col-md-2">
+              <div className="gridview gridview1">
+                <h4>Discover</h4>
+                <div className="footerlinks mar20">
+                  <a
+                    className="nav-link"
+                    href="/work"
+                  >
+                    <span>Work</span>
+                  </a>
+                  <a
+                       className="nav-link"
+                       href="/work"
+                  >
+                    
+                    <span>Services</span>
+                  </a>
+                  <a
+                    className="nav-link"
+                    href="/blogs"
+                  >
+                    <span>Press</span>
+                  </a>
+                  <a
+                    className="nav-link"
+                    href="/contact"
+                  >
+                    <span>Contact</span>
+                  </a>
                 </div>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <div className="gridview gridview1">
+                <h4>Legal</h4>
+                <div className="footerlinks mar20">
+                  <a
+                    className="nav-link"
+                    href="/terms&conditions"
+                  >
+                    <span>Terms & Conditions</span>
+                  </a>
+                  <a
+                    className="nav-link"
+                    href="/privacypolicy"
+                  >
+                    Privacy Policy
+                    </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <div className="gridview gridview1">
+                <h4>Connect</h4>
+                <div className="footerlinks mar20">
+                  <a
+                    href="https://www.facebook.com/constantineprandcommunications/"
+                    className="nav-link"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href="https://instagram.com/constantinepr?igshid=YmMyMTA2M2Y="
+                    className="nav-link"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/constantine-pr-communications/"
+                    className="nav-link"
+                  >
+                    Linkedin
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <div className="gridview gridview1">
+                <h4>About</h4>
+                <div className="footerlinks mar20">
+                  <a href="" className="nav-link">
+                    Our Mission
+                  </a>
+                  <a href="/about-us" className="nav-link">
+                    Company
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <div className="gridview gridview1">
+                <h4>Newsletter</h4>
+                <div className="footerlinks mar20">
+                  <Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Control type="email" placeholder="Enter email" />
+                      <Button type="submit" className="sbmitbtn">
+                        <HiArrowNarrowRight />
+                      </Button>
+                    </Form.Group>
+                  </Form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row bottomfixed">
+            <div className="col-md-4 vertical-center">
+              <img
+                src={"./assets/images/Logofooter.png"}
+                alt="footer-logo"
+                className="footer-logomob"
+              />
+              <div className="copywright">© ConstantinePR . 2023</div>
+            </div>
+            <div className="col-md-4 text-center">
+              <img
+                src={"./assets/images/cpr_ico_white.png"}
+                alt="footer-logo"
+                className="footer-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
-            </section>
-        </>
-    )
-}
-
-export default Footer
+export default Footer;
